@@ -7,6 +7,6 @@ Icon=lincvs.xpm
 Exec=lincvs
 Terminal=false
 Type=Application
-Categories=Development;RevisionControl;
+Categories=Qt;Development;RevisionControl;
 Encoding=UTF-8
 # vi: encoding=utf-8
