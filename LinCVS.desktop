@@ -8,4 +8,5 @@ Exec=lincvs
 Terminal=0
 Type=Application
 Categories=Development;RevisionControl;
+Encoding=UTF-8
 # vi: encoding=utf-8
