@@ -2,10 +2,9 @@
 Name=LinCVS
 Name[pl]=LinCVS
 Comment=Graphical CVS browser
-Comment[pl]=Graficzny eksplorator zasobow CVS
+Comment[pl]=Graficzny eksplorator zasobów CVS
 Icon=
 Exec=LinCVS
 Terminal=0
 Type=Application
-
 # vi: encoding=utf-8
