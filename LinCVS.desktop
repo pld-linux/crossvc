@@ -7,4 +7,5 @@ Icon=lincvs.xpm
 Exec=lincvs
 Terminal=0
 Type=Application
+Categories=Development;RevisionControl;
 # vi: encoding=utf-8
