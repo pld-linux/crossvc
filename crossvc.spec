@@ -54,10 +54,10 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir},%{_pixmapsdir}}
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}/{Messages,Tools}
 
 install CrossVC/AppRun $RPM_BUILD_ROOT%{_bindir}/crossvc
-install CrossVC/crossvc.bin $RPM_BUILD_ROOT%{_datadir}/%{name}
+install crossvc.bin $RPM_BUILD_ROOT%{_datadir}/%{name}
 install ts/*.qm $RPM_BUILD_ROOT%{_datadir}/%{name}/Messages
-install CrossVC/Tools/rshwrapper $RPM_BUILD_ROOT%{_datadir}/%{name}/Tools
-install CrossVC/Tools/ssh-askpass.bin $RPM_BUILD_ROOT%{_datadir}/%{name}/Tools
+install contrib/rshwrapper/rshwrapper $RPM_BUILD_ROOT%{_datadir}/%{name}/Tools
+install contrib/ssh-askpass/ssh-askpass $RPM_BUILD_ROOT%{_datadir}/%{name}/Tools
 install tools/*.sh $RPM_BUILD_ROOT%{_datadir}/%{name}/Tools
 install CrossVC/AppIcon.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/crossvc.xpm
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
@@ -65,7 +65,7 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 %clean
 rm -fr $RPM_BUILD_ROOT
 
-%files -f %{name}.lang
+%files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS LICENSE doc/{README,SSH-HOWTO.txt,PROXY-HOWTO.txt,FAQ.txt,FAM-HOWTO.txt,INFO.txt}
 %lang(de) %doc doc/translations/de/LIESMICH.txt
