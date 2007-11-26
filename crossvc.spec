@@ -1,15 +1,15 @@
 
-%define		_srcrel	0
+%define		srcrel	0
 
 Summary:	A Qt-based tool for managing CVS
 Summary(pl.UTF-8):	Narzędzie do zarządzania CVS-em oparte na Qt
 Name:		crossvc
 Version:	1.5.2
 Release:	2
-# GPL v.2 if linked with GPLed qt (as in PLD), custom otherwise (see LICENSE)
-License:	GPL v.2
+# GPL v2 if linked with GPLed qt (as in PLD), custom otherwise (see LICENSE)
+License:	GPL v2
 Group:		Development/Version Control
-Source0:	http://crossvc.com/download/%{name}-%{version}-%{_srcrel}-generic-src.tgz
+Source0:	http://crossvc.com/download/%{name}-%{version}-%{srcrel}-generic-src.tgz
 # Source0-md5:	4fb196e4e5fb5b6c5d901601869308b2
 Source1:	LinCVS.desktop
 URL:		http://www.crossvc.org/
@@ -23,19 +23,20 @@ Conflicts:	lincvs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-CrossVC\LinCVS acts as a reliable (!) graphical frontend for the CVS-client
-supporting both CVS-versions 1.9 and 1.10, perhaps even older ones. It
-allows to check out a module from and import of a module to a
-repository, to update or retrieve the status of a working directory or
-single files and common operations like add, remove and commit, diff
-against the repository or view of the log messages in list form. In
-contrast to other programs this one is REALLY easy to use ;-).
+CrossVC/LinCVS acts as a reliable (!) graphical frontend for the
+CVS-client supporting both CVS-versions 1.9 and 1.10, perhaps even
+older ones. It allows to check out a module from and import of a
+module to a repository, to update or retrieve the status of a working
+directory or single files and common operations like add, remove and
+commit, diff against the repository or view of the log messages in
+list form. In contrast to other programs this one is REALLY easy to
+use ;-).
 
 %description -l pl.UTF-8
-CrossVC\LinCVS działa jako niezawodny(!) graficzny frontend dla klienta CVS.
-Pozwala na import modułów z i do repozytorium oraz wszelkiego typu
-inne zwykłe operacje w CVS-ie. W przeciwieństwie do wielu innych
-programów jest NAPRAWDĘ prosty w użyciu ;-)
+CrossVC/LinCVS działa jako niezawodny(!) graficzny frontend dla
+klienta CVS. Pozwala na import modułów z i do repozytorium oraz
+wszelkiego typu inne zwykłe operacje w CVS-ie. W przeciwieństwie do
+wielu innych programów jest NAPRAWDĘ prosty w użyciu ;-)
 
 %prep
 %setup -q -n CrossVC
