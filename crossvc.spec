@@ -5,7 +5,7 @@ Summary:	A Qt-based tool for managing CVS
 Summary(pl.UTF-8):	Narzędzie do zarządzania CVS-em oparte na Qt
 Name:		crossvc
 Version:	1.5.2
-Release:	2
+Release:	3
 # GPL v2 if linked with GPLed qt (as in PLD), custom otherwise (see LICENSE)
 License:	GPL v2
 Group:		Development/Version Control
@@ -17,7 +17,7 @@ BuildRequires:	libtool
 BuildRequires:	qmake
 BuildRequires:	qt-devel >= 6:3.3
 BuildRequires:	sed >= 4.0
-Requires:	cvs >= 1.9
+Requires:	cvs-client >= 1.9
 Obsoletes:	lincvs
 Conflicts:	lincvs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
