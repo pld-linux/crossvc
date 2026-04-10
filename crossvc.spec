@@ -5,20 +5,21 @@ Summary:	A Qt-based tool for managing CVS
 Summary(pl.UTF-8):	Narzędzie do zarządzania CVS-em oparte na Qt
 Name:		crossvc
 Version:	1.5.2
-Release:	4
+Release:	5
 # GPL v2 if linked with GPLed qt (as in PLD), custom otherwise (see LICENSE)
 License:	GPL v2
 Group:		Development/Version Control
 Source0:	http://crossvc.com/download/%{name}-%{version}-%{srcrel}-generic-src.tgz
 # Source0-md5:	4fb196e4e5fb5b6c5d901601869308b2
 Source1:	LinCVS.desktop
+Patch0:		crossvc-rvalue.patch
 URL:		http://www.crossvc.org/
 BuildRequires:	libtool
 BuildRequires:	qmake
 BuildRequires:	qt-devel >= 6:3.3
 BuildRequires:	sed >= 4.0
 Requires:	cvs-client >= 1.9
-Obsoletes:	lincvs
+Obsoletes:	lincvs < 1.5
 Conflicts:	lincvs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -40,6 +41,7 @@ wielu innych programów jest NAPRAWDĘ prosty w użyciu ;-)
 
 %prep
 %setup -q -n CrossVC
+%patch -P0 -p1
 %{__sed} -i 's,`dirname.*,%{_datadir}/%{name},' CrossVC/AppRun
 
 %build

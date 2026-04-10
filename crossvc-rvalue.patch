@@ -1,0 +1,12 @@
+--- CrossVC/src/CvsDirectory.cpp.orig	2005-07-14 12:00:00.000000000 +0200
++++ CrossVC/src/CvsDirectory.cpp	2026-04-10 09:52:39.000000000 +0200
+@@ -2184,7 +2184,8 @@
+ 		     cvsEntry->date.dummy = false;
+ 		     cvsEntry->date.newDummy = false;
+ 		  }
+-		  QDateTime tmpTime = *((QDateTime *) &QtDateTime::fromString(cvsEntry->date.string));   // bugfix for qt3.3.8 datetime parsing bug
++		  QtDateTime qtDt = QtDateTime::fromString(cvsEntry->date.string);
++		  QDateTime tmpTime = *((QDateTime *) &qtDt);
+ 		  cvsEntry->date.datetime = tmpTime;
+ 		  bool invalid = false;
+ 		  if (!tmpTime.isValid()) {//no date in entries but "Result of merge" or alike
